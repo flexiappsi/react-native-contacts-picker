@@ -112,8 +112,8 @@ public class ContactsManager extends ReactContextBaseJavaModule implements Activ
   public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
     switch (resultCode) {
       case (Activity.RESULT_OK):
-        Uri contactUri = data.getData();
         try {
+          Uri contactUri = data.getData();
           /* Retrieve all possible data about contact and return as a JS object */
           //First get ID
           String id = null;
